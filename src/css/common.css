@@ -61,6 +61,10 @@ figure {
     font-weight: inherit;
 }
 
+p {
+    line-height: 1.45;
+}
+
 a {
     color: inherit;
     text-decoration: none;

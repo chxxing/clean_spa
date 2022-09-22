@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Sub02 = () => {
+const Sub02 = ({ content }) => {
     return (
         <div>
-            Sub02
+            {content[1].des}
         </div>
     )
 }
