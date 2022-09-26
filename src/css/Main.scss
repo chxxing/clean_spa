@@ -18,17 +18,20 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 600px;
+        height: 300px;
         transform: translate(0, -200px);
-        margin: 0 0 0 0px;
+        margin: 0 0 0 0;
     }
 
     .main_link {
         position: absolute;
-        display: flex;
         bottom: -100px;
         left: 50%;
+        display: flex;
         transform: translateX(-50%);
-        background: lightpink;
+        background: #f00;
+
 
         li {
             flex: 1;
@@ -48,19 +51,20 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                text-align: center;
+                align-items: center;
                 width: 100px;
                 height: 130px;
                 color: #fff;
-                background: url(../../public/assets/images/icon_set_w.png) no-repeat;
+                background-image: url(../../public/assets/images/icon_set_w.png);
+                background-repeat: no-repeat;
             }
         }
 
-        $bg-c : #da544b,
+        $bg-color : #da544b,
         #f4cb4f,
         #337689,
         #6fa476,
-        #f6f6f6;
+        #f4f4f4;
 
         @for $i from 1 to 5 {
             li:nth-child(#{$i}) .case {
@@ -68,19 +72,19 @@
             }
         }
 
-        // ????????????
-        @each $bg in $bg-c {
-            $index: index($bg-c, $bg);
+        @each $bg in $bg-color {
+            //index 값을 구하기
+            $idx: index($bg-color, $bg);
 
-            li:nth-child(#{$index}) {
+            li:nth-child(#{$idx}) {
                 background-color: $bg;
             }
         }
+
     }
 
     .customer {
-        $color: #337689;
-        $w-c: #ffffff;
+        $color : #337689;
         position: relative;
         padding: 50px 30px 0 0;
         text-align: right;
@@ -102,18 +106,18 @@
             top: -30px;
             right: 30px;
             background: $color;
-            color: $w-c;
+            color: #fff;
             font-size: 40px;
             padding: 10px;
             border-radius: 50%;
         }
     }
+
 }
 
 .MainContent {
     padding: 150px 0 100px 0;
-    white-space: pre-wrap;
-    background: linear-gradient(to top, #f6f6f6 50%, transparent 50%);
+    background: linear-gradient(to top, #f4f4f4 50%, transparent 50%);
 
     .inner {
         display: flex;
@@ -140,15 +144,15 @@
                 position: absolute;
                 top: -50px;
                 right: 30px;
-                background: rgba(244, 202, 78, 0.8);
+                background: rgba(244, 203, 79, 0.5);
                 color: #fff;
-                font-size: 13px;
-                font-weight: 700;
                 border-radius: 50%;
-                width: 60px;
-                height: 60px;
+                font-size: 12px;
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
                 text-align: center;
-                line-height: 60px;
+                line-height: 50px;
             }
 
             &::after {
